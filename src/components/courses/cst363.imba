@@ -1,28 +1,18 @@
-import "./courseDescription.imba"
-
 tag cst-363
-	css .content 
-		d:vflex jc:space-between ai:center
-		m:auto
-		p:1rem
-		g: 1rem
-
-	css	img w:100%
-	
 	<self>
-		<div .content>
-			<course-description>
-				<span slot="courseName"> "CST 338"
-				<div slot="courseDesc" [ta:left]> 
-					"This course provides balanced coverage of database use and design,
-					focusing on relational databases. Students will learn to design 
-					relational schemas, write SQL queries, access a DB programmatically,
-					and perform database administration. Students will gain a working
-					knowledge of the algorithms and data structures used in query
-					evaluation and transaction processing. Students will also learn
-					to apply newer database technologies such as XML, NoSQL, and Hadoop."
+		<course-page>
+			<span slot="course-name"> "CST 363"
+			<div slot="course-description"> 
+				"This course provides balanced coverage of database use and design,
+				focusing on relational databases. Students will learn to design 
+				relational schemas, write SQL queries, access a DB programmatically,
+				and perform database administration. Students will gain a working
+				knowledge of the algorithms and data structures used in query
+				evaluation and transaction processing. Students will also learn
+				to apply newer database technologies such as XML, NoSQL, and Hadoop."
 
-			<div .course content [d:vflex jc:space-between ai:center w:100% max-width:720px m:0 p:0 g:1rem]>
+
+			<div slot="course-content" [d:vcc ta:center]>
 				<div>
 					<p [ta: left]> "For this project we were tasked with developing a schema for
 						a fictional pharmaceutial company which gave some usecase scanerios and

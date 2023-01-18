@@ -1,5 +1,6 @@
-import './term-input.imba'
-import './term-output.imba'
+import "./term-input.imba"
+import "./term-output.imba"
+import "./courses/course-page.imba"
 import "./courses/home.imba"
 import "./courses/cst300.imba"
 import "./courses/cst338.imba"
@@ -82,8 +83,7 @@ tag term-io
 
 	def render
 		<self [w:100% h:100% of:scroll]
-			@command-entered=parse_command
-			@click=(lastElementChild.focus!)>
+			@command-entered=parse_command>
 			for ioLine, indx in output_state	
 				if ioLine.type === 'input'
 					<term-input 

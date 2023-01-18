@@ -1,26 +1,17 @@
-import "./courseDescription.imba"
-
 tag cst-336
-	css .content 
-		d:vflex jc:space-between ai:center
-		m:auto
-		p:1rem
-		g: 1rem
-
 	css	img object-fit:fill size:250px rd:25px
 	
 	<self>
-		<div .content>
-			<course-description>
-				<span slot="courseName"> "CST 336"
-				<div slot="courseDesc" [ta:left]> 
-					"This course is designed to provide students with dynamic web 
-					application development skills, focusing on both frontend and backend
-					development. Coverage includes the Internet architecture, HTML, CSS,
-					JavaScript, Web APIs, programming with Node.js.,
-					Express MVC Framework, and MySQL integration."
-
-			<div .course content [d:vflex jc:space-evenly ai:center w:100% m:0 p:0 g:2rem]>
+		<course-page>
+			<span slot="course-name"> "CST 336"
+			<div slot="course-description"> 
+				"This course is designed to provide students with dynamic web 
+				application development skills, focusing on both frontend and backend
+				development. Coverage includes the Internet architecture, HTML, CSS,
+				JavaScript, Web APIs, programming with Node.js.,
+				Express MVC Framework, and MySQL integration."
+				
+			<div slot="course-content" [d:vcc ta:center]>
 				<div>
 					<h3><strong><em> " Course Highlights"
 					<p [w: 100% max-width:720px]> "This course was a brief overview of the fundamentals of 

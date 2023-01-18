@@ -1,11 +1,9 @@
 tag home-page
-	css self h:100% 
 	css .content 
-		d:vflex jc:space-between ai:center
+		d:vsc
 		m:auto
 		p:2rem
 		g: 1rem
-		w: 100% h:100%
 		of:scroll
 
 	css	img w:100% max-width:1080px
