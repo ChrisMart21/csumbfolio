@@ -1,7 +1,7 @@
 tag course-page
 	def render
 		<self>
-			css bd:dashed bw:1px m:auto p:1rem maw:2000px
+			css m:auto p:1rem maw:2000px
 			css d:vsc g:1rem
 			<div$description-window>
 				css w:100% max-width:750px bd:solid bw:thin 

@@ -1,7 +1,6 @@
 tag term-input
 	prop text\string
 	prop disabled\boolean
-	prop indx\number
 	username\string = 'chris'
 	domain\string = 'termfolio'
 	currentDirectory\string = '~/courses$ '
@@ -24,7 +23,6 @@ tag term-input
 		
 	def handle_resize
 		$term-text-area.style.width = "{clientWidth - $term-domain.clientWidth}px"
-
 	def render
 		focus_input!
 		<self @resize=handle_resize>

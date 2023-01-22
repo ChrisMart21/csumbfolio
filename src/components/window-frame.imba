@@ -100,13 +100,14 @@ tag window-frame
 		@maximize=handle_maximize
 		@minimize=handle_minimize
 		>
-			css bgc:gray8 rd:lg pos:absolute t:10% l:0 t:0 
-
+			css bgc:gray8 rd:lg pos:absolute t:10% l:0 t:0
+				box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 			# Title, Nav, Preferences
 			<%title_bar [w:100% h:{Preferences.title-height}px]
-				@touch.sync(self)=handle_drag> "Christian's Termfoilo"
+				@touch.sync(self)=handle_drag
+				@dblclick=handle_maximize> "Christian's Termfoilo"
 				css bgc:gray9 w:100% h:100% rdt:lg cursor@hover:grab @active:grabbing 
-					ta:center d:hcs 
+					ta:center d:hcs of:hidden
 
 				<%max_resize_close>
 					css h:100% w:100px r:0px d:hcs jc:space-evenly

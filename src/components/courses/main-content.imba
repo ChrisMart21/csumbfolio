@@ -13,7 +13,7 @@ import "./cst438.imba"
 import "./cst329.imba"
 import "./cst498.imba"
 import "./cst499.imba"
-import "./footer.imba"
+import "../footer-tag.imba/index._ils._ils"
 tag main-content
 	css pos:absolute h:90vh l:1em r:.5em mt:8vh
 		tween: all 500ms ease

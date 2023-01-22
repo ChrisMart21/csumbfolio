@@ -16,7 +16,6 @@ import "./courses/cst438.imba"
 import "./courses/cst329.imba"
 import "./courses/cst498.imba"
 import "./courses/cst499.imba"
-import "./courses/footer.imba"
 tag term-io
 	output_state\object = [{type\string: 'input', text\string: '', disabled\boolean: false}]
 	commands\object = {
@@ -87,14 +86,12 @@ tag term-io
 			for ioLine, indx in output_state	
 				if ioLine.type === 'input'
 					<term-input 
-						indx=indx
 						bind:disabled=ioLine.disabled
 						bind:text=ioLine.text 
 						[y@in:100px x@out:-1000px ease:1s] ease>
 						
 				if ioLine.type === 'text-output'
 					<term-output text=ioLine.text
-						indx=indx
 						[x@in:-100px x@out:-1000px ease:500ms] ease>
 
 				if ioLine.type === 'course-tag'
