@@ -20,4 +20,4 @@ tag cst-462
 				<div [d:flex flw:wrap jc:space-evenly ai:center bgc:white/25 g:1rem p:1rem rd:25px]>
 						<div>
 							<a href="https://www.aahs-online.org/" target="_blank">
-								<img src="../assets/cst462/AAHS.jpg" [rd:25px]>
+								<img src="/assets/cst462/AAHS.jpg" [rd:25px]>

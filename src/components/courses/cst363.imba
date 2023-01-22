@@ -19,18 +19,18 @@ tag cst-363
 						requirements to build around."
 
 					<p> "Schema:"
-						<img [rd:xl] src="../assets/cst363/363dbFinalProjSchema.png">
+						<img [rd:xl] src="/assets/cst363/363dbFinalProjSchema.png">
 					<p>	"Then created	a script in Java using 
 					{<a href='https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/' target="_blank" > "JDBC"} 
 					to populate the database using dummy data with the aid of 
 					{<a href="https://github.com/faker-js/faker#readme" target="_blank" > "JS-Faker"}."
 
 					<p[bd:solid bw:thin bc:white/25 p:.25rem]> "Sample output:"
-						<img [rd:xl] src="../assets/cst363/363DBDataGenerate.png">
+						<img [rd:xl] src="/assets/cst363/363DBDataGenerate.png">
 
 					<p> "Finally, utilized {<a href="https://spring.io/" target="_blank" > "SpringBoot"} 
 					to create a simple webpage to implement and test the functionality of the DB"
 					<p[bd:solid bw:thin bc:white/25 p:.25rem]> "Sample Form/Data:"
-						<img [rd:xl] src="../assets/cst363/sampleForm.png">
+						<img [rd:xl] src="/assets/cst363/sampleForm.png">
 					<p> "Full project writeup:"
 					<iframe [w:100% h:500px] src="https://drive.google.com/file/d/1o6Z7HQNLDwfHl5QSs9BiKJni6JZAjtPn/preview?usp=sharing">

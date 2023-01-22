@@ -14,7 +14,7 @@ tag home-page
 	css	svg h:45px rd:50px p:.25rem bgc:white/25
 	<self>
 		<div .content>
-			<img src="../assets/img/te-montereybay.jpg">
+			<img src="/assets/img/te-montereybay.jpg">
 			<p> "Hello my name is Christian Martinez and 
 			I am proud to call myself a CSUMB Otter. 
 			Looking forward to completing my degree while learning the 

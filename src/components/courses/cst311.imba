@@ -20,7 +20,7 @@ tag cst-311
 					<br>
 					<div [rd:25px bgc:warm0/10 p:1rem d:vcs]>
 						<p> "Sample Run on Mininet Hosts:"
-							<img src="../assets/cst311/pythonChatClient.png">
+							<img src="/assets/cst311/pythonChatClient.png">
 						<br>
 						<p> "The server runs a multithreaded program that handles incomming 
 						connections and genreates an individual thread per client for recieving
@@ -34,4 +34,8 @@ tag cst-311
 						consists of 1 chat server host, 1 webserver proteccted by a SSL 
 						certificate and 2 chat clients"
 							<p> "Project writeup:"
-							<iframe [w:100% h:500px] src="https://drive.google.com/file/d/1zUt-KOaFxOmj9gFI8PneaGivg18Y78HT/preview?usp=sharing">
+							# <embed type="application/pdf" [w:100% h:500px]
+							# 	src="/assets/cst311/pa4Writeup.pdf#toolbar=0">
+							# <object [w:100% h:500px] data="/assets/cst311/pa4Writeup.pdf">
+							<iframe [w:100% h:500px rd:lg] src="/assets/cst311/pa4Writeup.pdf#toolbar=0&scrollbar=0&toolbar=0&navpanes=0">
+							# <iframe [w:100% h:500px] src="https://drive.google.com/file/d/1zUt-KOaFxOmj9gFI8PneaGivg18Y78HT/preview" allow="autoplay">
