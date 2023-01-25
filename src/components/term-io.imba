@@ -78,11 +78,24 @@ tag term-io
 			feed_new_line!
 
 	def scroll_to_bottom
-		scrollTop = scrollHeight
+		lastElementChild.lastElementChild.scrollIntoView({behavior: "smooth"})
+		
+	def focus_output e
+		e.target.scrollIntoView({behavior: "smooth"})
+
+	def input_mounted e
+		e.detail.focus({preventScroll:true})
+
+	def focus_input 
+		lastElementChild.lastElementChild.focus({preventScroll:true})
 
 	def render
 		<self [w:100% h:100% of:scroll]
-			@command-entered=parse_command>
+			@command-entered=parse_command
+			@output-mounted=focus_output
+			@input-mounted=input_mounted
+			@click=focus_input
+			>
 			for ioLine, indx in output_state	
 				if ioLine.type === 'input'
 					<term-input 

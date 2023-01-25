@@ -23,8 +23,11 @@ tag term-input
 		
 	def handle_resize
 		$term-text-area.style.width = "{clientWidth - $term-domain.clientWidth}px"
+
+	def mount
+		emit('input-mounted', lastElementChild)	
+
 	def render
-		focus_input!
 		<self @resize=handle_resize>
 			css d:htl w:100%
 

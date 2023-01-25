@@ -1,4 +1,7 @@
 tag course-page
+	def mount
+		emit('output-mounted')
+		
 	def render
 		<self>
 			css m:auto p:1rem maw:2000px

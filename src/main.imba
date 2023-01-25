@@ -16,7 +16,7 @@ tag app
 		window_dimensions.height = window.innerHeight
 		window_dimensions.width = window.innerWidth
 		
-	<self @resize=handle_resize >
+	<self @resize=handle_resize>
 		css h:100% w:100% 
 		<footer-tag>
 		<window-frame
