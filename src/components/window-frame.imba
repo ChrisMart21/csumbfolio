@@ -109,7 +109,7 @@ tag window-frame
 				css bgc:gray9 w:100% h:100% rdt:lg cursor@hover:grab @active:grabbing 
 					ta:center d:hcs of:hidden
 
-				<%max_resize_close>
+				<%max_resize_close @touch.stop>
 					css h:100% w:100px r:0px d:hcs jc:space-evenly
 					<title-button [bgc:green7] @click.emit('minimize')>
 					<title-button [bgc:orange555] @click.emit('maximize')>

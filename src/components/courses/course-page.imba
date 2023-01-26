@@ -10,7 +10,8 @@ tag course-page
 				css w:100% max-width:750px bd:solid bw:thin 
 				<div$description-header>
 					css bd:none bdb:solid bw:thin	d:flex jc:space-between px:.5rem
-					<slot name="course-name"> "Course Description" 
+					<slot name="course-name"> "Course Name" 
+					<p> "Course Description"
 				<div$description-text>
 					css p:.5rem ta:left
 					<slot name="course-description"> "No Desc Yet"

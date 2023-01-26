@@ -1,9 +1,9 @@
 tag footer-tag
 	<self>
 		css pos:absolute b:0px w:100% h:10% d:hbs 
-		<a  href="https://csumb.edu/">
+		<a [bgc:black/50 rdr:full pr:1rem pt:.25rem] href="https://csumb.edu/" >
 			<img [h:75px ] #csulogo src="/assets/img/csumbLogoTransparent.png">
-		<div[ta:center]>
+		<div[ta:center bgc:black/50 rdl:full px:0.5rem]>
 			<p> "Powered by"
 			<div [d:hbs mb:5px]>
 				<a href="https://imba.io" target="_blank">

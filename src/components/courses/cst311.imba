@@ -37,5 +37,5 @@ tag cst-311
 							# <embed type="application/pdf" [w:100% h:500px]
 							# 	src="/assets/cst311/pa4Writeup.pdf#toolbar=0">
 							# <object [w:100% h:500px] data="/assets/cst311/pa4Writeup.pdf">
-							<iframe [w:100% h:500px rd:lg] src="/assets/cst311/pa4Writeup.pdf#toolbar=0&scrollbar=0&toolbar=0&navpanes=0">
-							# <iframe [w:100% h:500px] src="https://drive.google.com/file/d/1zUt-KOaFxOmj9gFI8PneaGivg18Y78HT/preview" allow="autoplay">
+							# <iframe [w:100% h:500px rd:lg] src="/assets/cst311/pa4Writeup.pdf#toolbar=0&scrollbar=0&toolbar=0&navpanes=0">
+							<iframe [w:100% h:500px] src="https://drive.google.com/file/d/1zUt-KOaFxOmj9gFI8PneaGivg18Y78HT/preview">

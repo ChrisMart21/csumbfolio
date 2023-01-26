@@ -5,6 +5,8 @@ tag term-output
 	prop text\string
 	<self> 
 		css w:100% h:auto px: 0.5rem 
-		<p> "> {text}"
-			css w:100% h:auto ws:pre-line
+			d:htl g:.5rem
+		<p> ">>"
+		<p> text
+			css w:100% h:auto ws:pre-line word-break:break-all
 		

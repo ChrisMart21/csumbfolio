@@ -12,8 +12,6 @@ tag term-input
 			disabled = true
 			emit('command-entered', k.target.value)
 
-	def focus_input
-		unless disabled then $term-text-area.focus!
 
 	def resize_ta_height e\InputEvent
 		# L e.target.offsetHeight, e.target.clientHeight
@@ -36,6 +34,6 @@ tag term-input
 			<textarea$term-text-area rows='1' wrap='hard' 
 				disabled=disabled
 				@input=resize_ta_height
-				@keydown.enter.prevent=handle_command
+				@keydown.enter=handle_command
 				bind=text>
 				css bgc:clear resize:none ol:none mx:0.5rem

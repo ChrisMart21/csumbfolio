@@ -16,8 +16,11 @@ import "./courses/cst438.imba"
 import "./courses/cst329.imba"
 import "./courses/cst498.imba"
 import "./courses/cst499.imba"
+
 tag term-io
 	output_state\object = [{type\string: 'input', text\string: '', disabled\boolean: false}]
+
+		
 	commands\object = {
 				echo: do(flags\Array, args\Array)
 					output_state.push({
@@ -42,8 +45,6 @@ tag term-io
 					})
 					feed_new_line!
 			}
-	clear-buffer-height\number = 0
-	cleared\boolean = false
 	def feed_new_line 
 		output_state.push({
 			type\string: 'input'
@@ -57,19 +58,23 @@ tag term-io
 			disabled\boolean: false})
 		
 	def parse_command e\CustomEvent
-		# let line-entered\string = e.detail
-		let line-split\Array = e.detail.trim!.split(/[\s]+/)
+		let line-split\Array = e.detail.trim!.split(' ')
+		L line-split.join(" ")
 		let command\string = line-split.shift!
 		let flags\Array = []
 		let args\Array = []
+		let flagscaptured = false
 		if commands.hasOwnProperty(command)
-			while let split\string = line-split.shift!
-				if split.charAt(0) === '-' # Flag Indicator
+			while line-split.length > 0 
+				let split\string = line-split.shift!
+				if split.charAt(0) === '-' and !flagscaptured # Flag Indicator
 					for f in split.slice(1).toLowerCase!.split('')
 						unless flags.includes(f) then flags.push(f)					
+					flagscaptured = !flagscaptured
 				else # Arguments
-					unless args.includes(split) then args.push(split)
+					args.push(split)
 			commands[command](flags, args)
+			L "Command: {command} flags: {flags} args: {args}"
 		else
 			output_state.push({
 				type: 'text-output'
