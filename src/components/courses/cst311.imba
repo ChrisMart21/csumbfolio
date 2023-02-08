@@ -13,12 +13,12 @@ tag cst-311
 				lab components."
 
 
-			<div slot="course-content" [d:vcc ta:center]>
+			<div slot="course-content" [d:vcc ta:center g:2rem]>
 				<h3><u> "Course Highlights"
 				<p><strong> "Python Chat server written using the python3 
 				{<a href="https://docs.python.org/3/library/socket.html" target="_blank"> "socket API"}." 
 					<br>
-					<div [rd:25px bgc:warm0/10 p:1rem d:vcs]>
+					<div [rd:25px bgc:warm0/10 p:1rem d:vsc g:1rem]>
 						<p> "Sample Run on Mininet Hosts:"
 							<img src="/assets/cst311/pythonChatClient.png">
 						<br>
@@ -34,8 +34,4 @@ tag cst-311
 						consists of 1 chat server host, 1 webserver proteccted by a SSL 
 						certificate and 2 chat clients"
 							<p> "Project writeup:"
-							# <embed type="application/pdf" [w:100% h:500px]
-							# 	src="/assets/cst311/pa4Writeup.pdf#toolbar=0">
-							# <object [w:100% h:500px] data="/assets/cst311/pa4Writeup.pdf">
-							# <iframe [w:100% h:500px rd:lg] src="/assets/cst311/pa4Writeup.pdf#toolbar=0&scrollbar=0&toolbar=0&navpanes=0">
 							<iframe [w:100% h:500px] src="https://drive.google.com/file/d/1zUt-KOaFxOmj9gFI8PneaGivg18Y78HT/preview">
