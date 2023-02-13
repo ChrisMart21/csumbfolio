@@ -9,9 +9,9 @@ tag cst-462
 					through service, increase awareness about the covered topics, and 
 					provide hands-on experience for students."
 
-			<div slot="course-content" [d:vcc ta:center]>
+			<div slot="course-content" [d:vcc ]>
 				<div>
-					<h3><strong><em> " Course Highlights"
+					<h3[ta:center]><strong><em> " Course Highlights"
 					<p [w: 100% max-width:720px]> "For this course I partnered,
 					and served 25+ hours towards helping catalog Books, Magazines, 
 					and other Periodicals with the

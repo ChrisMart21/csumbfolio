@@ -36,38 +36,6 @@ tag window-frame
 	@computed get y_bounds
 		environment_height - height
 
-	def handle_maximize
-		self.flags.add('anim')
-		if maximized? == false
-			maximized? = true
-			height = environment_height
-			width = environment_width
-		else 
-			maximized? = false
-			height = minimized_state.height
-			width = minimized_state.width
-			x = minimized_state.x
-			y = minimized_state.y
-
-
-	def handle_minimize
-		L "Not Yet Implemented!"
-
-	def handle_resize t
-		self.flags.remove('anim')
-		unless maximized?
-			if t.clientY <= environment_height and t.y0 + t.dy > min_height
-				height = t.y0 + t.dy
-			if t.clientX <= environment_width and t.x0 + t.dx > min_width
-				width = t.x0 + t.dx
-
-	def handle_drag t
-		self.flags.remove('anim')
-		if x < 0 then	x = 0
-		if y < 0 then y = 0
-		if x > x_bounds then x = x_bounds
-		if y > y_bounds then y = y_bounds
-
 	def check_bounds	
 		if x > x_bounds then x = Math.max(x_bounds, 0)
 		if y > y_bounds then y = Math.max(y_bounds,0)
@@ -89,16 +57,52 @@ tag window-frame
 			minimized_state.width = width
 			minimized_state.x = x
 			minimized_state.y = y 
+			
+	def handle_maximize
+		self.flags.add('anim')
+		if maximized? == false
+			maximized? = true
+			height = environment_height
+			width = environment_width
+		else 
+			maximized? = false
+			height = minimized_state.height
+			width = minimized_state.width
+			x = minimized_state.x
+			y = minimized_state.y
+
+
+	def handle_minimize
+		L "Not Yet Implemented!"
+
+	def handle_resize t
+		unless maximized?
+			if t.clientY <= environment_height and t.y0 + t.dy > min_height
+				height = t.y0 + t.dy
+			if t.clientX <= environment_width and t.x0 + t.dx > min_width
+				width = t.x0 + t.dx
+
+	def handle_drag t
+		if x < 0 then	x = 0
+		if y < 0 then y = 0
+		if x > x_bounds then x = x_bounds
+		if y > y_bounds then y = y_bounds
+
+
+	def handle_t_end
+		self.flags.remove('anim')
 	
 	def render
 		check_dimensions!
 		check_bounds!
 		track_state!
+
 		
 		css .anim tween:all 700ms back-in
 		<self [x:{x}px y:{y}px h:{height}px w:{width}px ]
 		@maximize=handle_maximize
 		@minimize=handle_minimize
+		@transitionend=handle_t_end
 		>
 			css bgc:gray8 rd:lg pos:absolute t:10% l:0 t:0
 				box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
