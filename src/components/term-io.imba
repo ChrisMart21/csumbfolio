@@ -20,7 +20,7 @@ import "./courses/cst499.imba"
 tag term-io
 	output_state\object = [
 		# Testiung purposes only! Remove Below Line / Edit for testing.
-		{type\string: 'course-tag', course-num\string: '370'}
+		# {type\string: 'course-tag', course-num\string: '370'}
 		{type\string: 'input', text\string: '', disabled\boolean: false}
 	]
 

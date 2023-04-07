@@ -20,7 +20,7 @@ tag window-frame
 		y: 0
 	}
 
-	@observable prop height = 1400
+	@observable prop height = 1080
 	@observable prop width = 1080
 	@observable prop environment_height = 0
 	@observable prop environment_width = 0
