@@ -15,8 +15,8 @@ tag cst-311
 
 			<div slot="course-content" [d:vcc ta:center g:2rem]>
 				<h3><u> "Course Highlights"
-				<p><strong> "Python Chat server written using the python3 
-				{<a href="https://docs.python.org/3/library/socket.html" target="_blank"> "socket API"}." 
+				<p><strong> "Python Chat server written using the python3 "
+					<a href="https://docs.python.org/3/library/socket.html" target="_blank"> "socket API." 
 					<br>
 					<div [rd:25px bgc:warm0/10 p:1rem d:vsc g:1rem]>
 						<p> "Sample Run on Mininet Hosts:"
