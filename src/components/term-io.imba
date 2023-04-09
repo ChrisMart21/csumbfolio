@@ -1,7 +1,8 @@
 import "./term-input.imba"
 import "./term-output.imba"
+import "./home.imba"
+import "./about.imba"
 import "./courses/course-page.imba"
-import "./courses/home.imba"
 import "./courses/cst300.imba"
 import "./courses/cst338.imba"
 import "./courses/cst334.imba"
@@ -20,35 +21,59 @@ import "./courses/cst499.imba"
 tag term-io
 	output_state\object = [
 		# Testiung purposes only! Remove Below Line / Edit for testing.
+		{type\string: 'input', text\string: 'view home', disabled\boolean: true}
+		{type\string: 'course-tag', course-num\string: 'home'}
+		# {type\string: 'input', text\string: 'about', disabled\boolean: true}
+		# {type\string: 'command', command\string: 'about'}
 		# {type\string: 'course-tag', course-num\string: '370'}
+
+
+
 		{type\string: 'input', text\string: '', disabled\boolean: false}
 	]
 
-		
 	commands\object = {
-				echo: do(flags\Array, args\Array)
-					output_state.push({
-						type\string: 'text-output'
-						text\string: args.join(' ')
-						disabled\boolean: false})
-					feed_new_line!
-					
-				reset: do(flags\Array, args\Array)
-					while output_state.length > 0 
-						output_state.pop!
-					feed_new_line!
-
-				clear: do(flags\Array, args\Array)
-					nyi!
-					feed_new_line!
-
-				run: do(flags\Array, args\Array)
-					output_state.push({
-						type\string: 'course-tag'
-						course-num\string: "{args[0]}"
-					})
-					feed_new_line!
-			}
+		echo:{
+			helperText\string: 'Echoes the given text',
+			execute\Function: do(flags\Array, args\Array)
+				output_state.push({
+					type\string: 'text-output'
+					text\string: args.join(' ')
+					disabled\boolean: false})
+				feed_new_line!
+		},
+		reset:{
+			helperText\string: 'Resets the terminal',
+			execute\Function: do(flags\Array, args\Array)
+				while output_state.length > 0 
+					output_state.pop!
+				feed_new_line!
+		},
+		view:{
+			helperText\string: 'View a course page',
+			execute\Function: do(flags\Array, args\Array)
+				output_state.push({
+					type\string: 'course-tag'
+					course-num\string: "{args[0]}"
+				})
+				feed_new_line!
+		},
+		about:{
+			helperText\string: 'View the about page',
+			execute\Function: do(flags\Array, args\Array)
+				output_state.push({
+					type\string: 'command'
+					command\string: 'about'
+				})
+				feed_new_line!
+		},
+		"":{
+			helperText\string: 'Shouldnt be here',
+			execute\Function: do(flags\Array, args\Array)
+				feed_new_line!
+		}
+	}
+	
 	def feed_new_line 
 		output_state.push({
 			type\string: 'input'
@@ -77,7 +102,7 @@ tag term-io
 					flagscaptured = !flagscaptured
 				else # Arguments
 					args.push(split)
-			commands[command](flags, args)
+			commands[command]['execute'](flags, args)
 			L "Command: {command} flags: {flags} args: {args}"
 		else
 			output_state.push({
@@ -115,6 +140,10 @@ tag term-io
 				if ioLine.type === 'text-output'
 					<term-output text=ioLine.text
 						[x@in:-100px x@out:-1000px ease:500ms] ease>
+				
+				if ioLine.type === 'command'
+					if ioLine.command === 'about'
+						<about>
 
 				if ioLine.type === 'course-tag'
 					if ioLine.course-num === 'home'
