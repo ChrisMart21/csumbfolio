@@ -1,4 +1,4 @@
-import "./home.imba"
+import "../home.imba"
 import "./cst300.imba"
 import "./cst338.imba"
 import "./cst334.imba"

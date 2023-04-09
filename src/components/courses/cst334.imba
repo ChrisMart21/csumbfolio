@@ -40,7 +40,7 @@ tag cst-334
 						<li> "Develop a C program to solve the producer - consumer problem "
 				
 				<div [w:100% max-width:720px]>
-					<h1> "Main takeaways"
+					<h1><u> "Main takeaways"
 					<p [ta:left]> "This course helped shed light on the many layers of abstraction
 					that our modern operating systems are built upon. 
 					Scheduling, multi-threaded concurency, persistence, and filesystem mechanics. 

@@ -8,7 +8,8 @@ tag cst-338
 		rd:20px of:hidden m:0 p:0
 	css .useCaseText
 		fs: xl
-	def mount # use awaken instead?
+		
+	def mount 
 		x = new Freezeframe(
 			{selector: '.useCase',
 			trigger: 'click',
@@ -26,7 +27,7 @@ tag cst-338
 				programming. Coverage includes software development life cycle 
 				models, requirements analysis, and graphical user interface development."
 			<div slot="course-content" [d:vcc ta:center]>
-				<p [ta:left]> "The objective of this project was to familiarize 
+				<p [ta:left max-width:720px]> "The objective of this project was to familiarize 
 				ourselves with software development lifecycles. 
 				Each gif represents a use case target which was planned prior to coding.
 				This workflow may seem foreign to newer developers. "

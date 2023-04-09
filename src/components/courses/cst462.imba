@@ -3,7 +3,7 @@ tag cst-462
 		<course-page>
 			<span slot="course-name"> "CST 462"
 			<div slot="course-description"> 
-				"This is a mostly	asynchronous, 8-week course in which students learn about and discuss 
+				"This is an 8-week course in which students learn about and discuss 
 				a weekly social justice topic while providing tech-based service to an
 					approved community partner. This course aims to strengthen communities 
 					through service, increase awareness about the covered topics, and 
@@ -33,7 +33,7 @@ tag cst-462
 					time there I learned so much about aviation culture and the values they stand for.
 					The AAHS is a small close-knit organization that is almost 
 					exclusively led by volunteers. To help keep their vision alive, please consider 
-					volunteering, becoming a MEMBER, or donating to the cause.
+					volunteering, becoming a member, or donating to the cause.
 					If you or	somebody you know has a any background or interst with military/civilian aviation please visit
 					the {<a href="https://www.aahs-online.org/" target="_blank"> 'AAHS Website'} to learn more about this organization."
 				<div [w:100% max-width:720px]> 
