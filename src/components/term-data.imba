@@ -21,8 +21,8 @@ export let output_state\object = [
 		{type\string: 'course-tag', course-num\string: 'home'}
 		{type\string: 'command', command\string: 'help'}
 		
-		{type\string: 'input', text\string: 'ls', disabled\boolean: true}
-		{type\string: 'command', command\string: 'ls'}
+		# {type\string: 'input', text\string: 'ls', disabled\boolean: true}
+		# {type\string: 'command', command\string: 'ls'}
 
 
 		# {type\string: 'input', text\string: 'about', disabled\boolean: true}
