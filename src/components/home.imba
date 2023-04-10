@@ -10,7 +10,7 @@ tag home-page
 
 	css	img w:100% max-width:1080px
 	
-	css p max-width:750px
+	css p max-width:720px
 
 	css	a td:underline c:purple4 
 	css	svg h:45px rd:50px p:.25rem bgc:white/25
@@ -22,5 +22,4 @@ tag home-page
 			Looking forward to completing my degree while learning the 
 			fundamentals of CS. This webpage is a porfolio of my 
 				endeavors during my time with CS Online @ CSUMB."
-			<p> 'It was written as an homage to the terminal; one of the primary tools that sparked my interest in computers, and programming.			'
-			# <p> "This webpage is a porfolio of my endeavors during my time with CS Online @ CSUMB"
+			<p> 'Written as an homage to the terminal; one of the primary tools that sparked my interest in computers, and programming.'

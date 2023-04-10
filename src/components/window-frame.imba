@@ -109,12 +109,12 @@ tag window-frame
 			# Title, Nav, Preferences
 			<%title_bar [w:100% h:{Preferences.title-height}px]
 				@touch.sync(self)=handle_drag
-				@dblclick=handle_maximize> "Christian's Termfoilo"
+				@dblclick=handle_maximize> 
 				css bgc:gray9 w:100% h:100% rdt:lg cursor@hover:grab @active:grabbing 
 					ta:center d:hcs of:hidden
-
+				<div [w:100%]> <p> "Christian's Termfoilo"	
 				<%max_resize_close @touch.stop>
-					css h:100% w:100px r:0px d:hcs jc:space-evenly
+					css h:100% w:100px r:0px d:hcs jc:space-evenly pos:absolute
 					<title-button [bgc:green7] @click.emit('minimize')>
 					<title-button [bgc:orange555] @click.emit('maximize')>
 					<title-button [bgc:red58] @click.emit('exit')>	

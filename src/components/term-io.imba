@@ -2,6 +2,7 @@ import "./term-input.imba"
 import "./term-output.imba"
 import "./home.imba"
 import "./about.imba"
+import "./help.imba"
 import "./courses/course-page.imba"
 import "./courses/cst300.imba"
 import "./courses/cst338.imba"
@@ -23,9 +24,13 @@ tag term-io
 		# Testiung purposes only! Remove Below Line / Edit for testing.
 		{type\string: 'input', text\string: 'view home', disabled\boolean: true}
 		{type\string: 'course-tag', course-num\string: 'home'}
+		{type\string: 'command', command\string: 'help'}
 		# {type\string: 'input', text\string: 'about', disabled\boolean: true}
 		# {type\string: 'command', command\string: 'about'}
 		# {type\string: 'course-tag', course-num\string: '370'}
+		{type\string: 'input', text\string: 'help', disabled\boolean: true}
+		{type\string: 'command', command\string: 'help'}
+
 
 
 
@@ -33,51 +38,66 @@ tag term-io
 	]
 
 	commands\object = {
-		echo:{
-			helperText\string: 'Echoes the given text',
+		ls\object:{
+			helperText\string: 'List the Courses availabe in this directory',
+			usage\string: "ls"
 			execute\Function: do(flags\Array, args\Array)
-				output_state.push({
-					type\string: 'text-output'
-					text\string: args.join(' ')
-					disabled\boolean: false})
-				feed_new_line!
-		},
-		reset:{
-			helperText\string: 'Resets the terminal',
-			execute\Function: do(flags\Array, args\Array)
-				while output_state.length > 0 
-					output_state.pop!
-				feed_new_line!
-		},
-		view:{
+				nyi!
+		}
+		view\object:{
 			helperText\string: 'View a course page',
+			usage\string: "view \{course-number\}"
 			execute\Function: do(flags\Array, args\Array)
 				output_state.push({
 					type\string: 'course-tag'
 					course-num\string: "{args[0]}"
 				})
 				feed_new_line!
-		},
-		about:{
+		}
+		echo\object:{
+			helperText\string: 'Echoes the given text',
+			usage\string: "echo \{text\}"
+			execute\Function: do(flags\Array, args\Array)
+				output_state.push({
+					type\string: 'text-output'
+					text\string: args.join(' ')
+					disabled\boolean: false})
+				feed_new_line!
+		}
+		reset\object:{
+			helperText\string: 'Clears the terminal output',
+			usage\string: "reset"
+			execute\Function: do(flags\Array, args\Array)
+				while output_state.length > 0 
+					output_state.pop!
+				feed_new_line!
+		}
+		about\object:{
 			helperText\string: 'View the about page',
+			usage\string: "about"
 			execute\Function: do(flags\Array, args\Array)
 				output_state.push({
 					type\string: 'command'
 					command\string: 'about'
 				})
 				feed_new_line!
-		},
-		"":{
-			helperText\string: 'Shouldnt be here',
+		}
+		help\object:{
+			helperText\string: 'List of commands to use view the help page',
+			usage\string: "help"
 			execute\Function: do(flags\Array, args\Array)
+				output_state.push({
+					type\string: 'command'
+					command\string: 'help'
+				})
 				feed_new_line!
 		}
 	}
 	
-	def feed_new_line 
+	def feed_new_line(newLineText="") 
 		output_state.push({
 			type\string: 'input'
-			text\string: ''
+			text\string: newLineText
 			disabled\boolean: false})
 
 	def nyi 
@@ -128,6 +148,7 @@ tag term-io
 			@command-entered=parse_command
 			@output-mounted=focus_output
 			@input-mounted=input_mounted
+			@help-command=feed_new_line(e.detail)
 			@click=focus_input
 			>
 			for ioLine, indx in output_state	
@@ -143,7 +164,9 @@ tag term-io
 				
 				if ioLine.type === 'command'
 					if ioLine.command === 'about'
-						<about>
+						<about [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
+					if ioLine.command === 'help'
+						<help commands=commands [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 
 				if ioLine.type === 'course-tag'
 					if ioLine.course-num === 'home'
