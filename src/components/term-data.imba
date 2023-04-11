@@ -18,11 +18,11 @@ export let courseList = [
 export let output_state\object = [
 		# Testiung purposes only! Remove Below Line / Edit for testing.
 		
-		# {type\string: 'input', text\string: 'home', disabled\boolean: true}
-		# {type\string: 'command', command\string: 'home'}
+		{type\string: 'input', text\string: 'home', disabled\boolean: true}
+		{type\string: 'command', command\string: 'home'}
 
-		# {type\string: 'input', text\string: 'help', disabled\boolean: true}
-		# {type\string: 'command', command\string: 'help'}
+		{type\string: 'input', text\string: 'help', disabled\boolean: true}
+		{type\string: 'command', command\string: 'help'}
 		
 		# {type\string: 'input', text\string: 'ls', disabled\boolean: true}
 		# {type\string: 'command', command\string: 'ls'}
@@ -34,7 +34,7 @@ export let output_state\object = [
 		# {type\string: 'input', text\string: 'view 370', disabled\boolean: true}
 		# {type\string: 'course-tag', course-num\string: '328'}
 		# {type\string: 'course-tag', course-num\string: '370'}
-		{type\string: 'course-tag', course-num\string: '383'}
+		# {type\string: 'course-tag', course-num\string: '383'}
 
 		{type\string: 'input', text\string: '', disabled\boolean: false}
 	]
