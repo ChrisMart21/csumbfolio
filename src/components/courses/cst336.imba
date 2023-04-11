@@ -12,7 +12,7 @@ tag cst-336
 				Express MVC Framework, and MySQL integration."
 				
 			<div slot="course-content" [d:vsc w:100% g:1rem ]>
-				<div [d:vsc maw:1080px]>
+				<div [d:vsc maw:720px]>
 					<div [d:vsc]>
 						<h3><strong><em> " Course Highlights"
 						<p [w: 100% max-width:720px]> "This course was a brief overview of the fundamentals of 
@@ -21,7 +21,7 @@ tag cst-336
 						guided lab, and self directed 'miniproject'."
 					<div [d:vsc ta:center g:1.5rem ] >
 						<div>				
-							<h3><strong> "Pure HTML / CSS"
+							<h3><strong> "Basic HTML / CSS"
 							<div [d:hsc jc:space-evenly  bgc:white/25 g:1rem p:1rem rd:25px]>
 								<div >
 									<p> "Mock Portfolio Website"

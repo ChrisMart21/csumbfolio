@@ -29,7 +29,9 @@ tag cst-300
 					src="https://drive.google.com/file/d/1tRbrjInGBa51_nK7YmTo0DaTvCO20uKt/preview?usp=sharing">
 				<iframe [w:100% h:450px max-width:1080px ] 
 					src="https://www.youtube-nocookie.com/embed/wv3PSN5i6-E" title="YouTube video player" 
-					frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullscreen>
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowFullscreen>
 				<iframe [w:100% h:450px max-width:1080px ] 
 					src="https://www.youtube-nocookie.com/embed/qlNqyiX2ypA" title="YouTube video player" 
-					frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullscreen>
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowFullscreen>

@@ -17,6 +17,6 @@ tag help
 				<tbody>
 				for own command, value of commands
 					<tr>
-						<td> <button @click=emit("help-command", command)> command 
+						<td> command 
 						<td> value["usage"]
 						<td> value["helperText"]

@@ -57,10 +57,10 @@ tag term-io
 						<help commands=commands [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 					if ioLine.command === 'ls'
 						<listdir [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
+					if ioLine.command === 'home'
+						<home-page [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 
 				if ioLine.type === 'course-tag'
-					if ioLine.course-num === 'home'
-						<home-page [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 					if ioLine.course-num === '300'
 						<cst-300 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 					if ioLine.course-num === '338'

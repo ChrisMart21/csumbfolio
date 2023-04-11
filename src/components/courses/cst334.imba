@@ -16,7 +16,7 @@ tag cst-334
 				cloud computing. "
 
 			<div slot="course-content" [d:vcc ta:center]>
-				<h1> "Course Highlights"
+				<h1><u> "Course Highlights"
 				<ul>
 					<li><strong> "Programming in C and use of System Calls"
 					<ul>

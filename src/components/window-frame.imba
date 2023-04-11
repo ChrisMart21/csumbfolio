@@ -102,6 +102,7 @@ tag window-frame
 		<self [x:{x}px y:{y}px h:{height}px w:{width}px ]
 		@maximize=handle_maximize
 		@minimize=handle_minimize
+		@exit=handle_minimize
 		@transitionend=handle_t_end
 		>
 			css bgc:gray8 rd:lg pos:absolute t:10% l:0 t:0

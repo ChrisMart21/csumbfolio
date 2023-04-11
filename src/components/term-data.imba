@@ -17,9 +17,12 @@ export let courseList = [
 
 export let output_state\object = [
 		# Testiung purposes only! Remove Below Line / Edit for testing.
-		{type\string: 'input', text\string: 'view home', disabled\boolean: true}
-		{type\string: 'course-tag', course-num\string: 'home'}
-		{type\string: 'command', command\string: 'help'}
+		
+		# {type\string: 'input', text\string: 'home', disabled\boolean: true}
+		# {type\string: 'command', command\string: 'home'}
+
+		# {type\string: 'input', text\string: 'help', disabled\boolean: true}
+		# {type\string: 'command', command\string: 'help'}
 		
 		# {type\string: 'input', text\string: 'ls', disabled\boolean: true}
 		# {type\string: 'command', command\string: 'ls'}
@@ -29,7 +32,8 @@ export let output_state\object = [
 		# {type\string: 'command', command\string: 'about'}
 
 		# {type\string: 'input', text\string: 'view 370', disabled\boolean: true}
-		# {type\string: 'course-tag', course-num\string: '370'}
+		# {type\string: 'course-tag', course-num\string: '328'}
+		{type\string: 'course-tag', course-num\string: '370'}
 
 
 
@@ -82,6 +86,16 @@ export let commands\object = {
 				output_state.push({
 					type\string: 'command'
 					command\string: 'about'
+				})
+				feed_new_line!
+		}
+		home\object:{
+			helperText\string: 'View the home page',
+			usage\string: "home"
+			execute\Function: do(flags\Array, args\Array)
+				output_state.push({
+					type\string: 'command'
+					command\string: 'home'
 				})
 				feed_new_line!
 		}
