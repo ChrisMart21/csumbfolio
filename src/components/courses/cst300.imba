@@ -25,13 +25,13 @@ tag cst-300
 					<li> "Engage in online discussion"
 
 			<div slot="course-content" [d:vsc w:100% g:1rem]>
-				<iframe [w:100% h:450px max-width:1080px ] 
+				<iframe [w:100% h:450px max-width:720px ] 
 					src="https://drive.google.com/file/d/1tRbrjInGBa51_nK7YmTo0DaTvCO20uKt/preview?usp=sharing">
-				<iframe [w:100% h:450px max-width:1080px ] 
+				<iframe [w:100% h:450px max-width:720px ] 
 					src="https://www.youtube-nocookie.com/embed/wv3PSN5i6-E" title="YouTube video player" 
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowFullscreen>
-				<iframe [w:100% h:450px max-width:1080px ] 
+				<iframe [w:100% h:450px max-width:720px ] 
 					src="https://www.youtube-nocookie.com/embed/qlNqyiX2ypA" title="YouTube video player" 
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowFullscreen>

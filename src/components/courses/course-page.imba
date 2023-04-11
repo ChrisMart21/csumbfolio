@@ -19,4 +19,3 @@ tag course-page
 			<div$course-content>
 				css w:100%
 				<slot name="course-content"> "No Content Yet :/"
-			

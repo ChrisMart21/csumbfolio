@@ -89,6 +89,3 @@ tag term-io
 						<cst-498 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 					if ioLine.course-num === '499'
 						<cst-499 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-
-
-			# <div$clear-buffer [w:100% h:{clear-buffer-height}px bd:dashed bw:1px] @resize=scroll_to_bottom>	

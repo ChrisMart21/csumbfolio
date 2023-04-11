@@ -33,10 +33,8 @@ export let output_state\object = [
 
 		# {type\string: 'input', text\string: 'view 370', disabled\boolean: true}
 		# {type\string: 'course-tag', course-num\string: '328'}
-		{type\string: 'course-tag', course-num\string: '370'}
-
-
-
+		# {type\string: 'course-tag', course-num\string: '370'}
+		{type\string: 'course-tag', course-num\string: '383'}
 
 		{type\string: 'input', text\string: '', disabled\boolean: false}
 	]
@@ -55,11 +53,20 @@ export let commands\object = {
 			helperText\string: 'View a course page',
 			usage\string: "view \{course-number\}"
 			execute\Function: do(flags\Array, args\Array)
+				for course of courseList
+					if course.courseNum == args[0]
+						output_state.push({
+							type\string: 'course-tag'
+							course-num\string: "{args[0]}"
+						})
+						feed_new_line!
+						return
 				output_state.push({
-					type\string: 'course-tag'
-					course-num\string: "{args[0]}"
-				})
+					type: 'text-output'
+					text: "{args[0]} is not a valid course number"
+					editable: false})
 				feed_new_line!
+
 		}
 		echo\object:{
 			helperText\string: 'Echoes the given text',
