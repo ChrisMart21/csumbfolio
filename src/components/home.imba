@@ -4,7 +4,7 @@ tag home-page
 	css .content 
 		d:vsc
 		m:auto
-		# p:2rem
+		px:1rem
 		g: 1rem
 		of:scroll
 

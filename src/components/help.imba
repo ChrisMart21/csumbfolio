@@ -4,7 +4,7 @@ tag help
 		emit('output-mounted')
 	def render
 		<self>
-			css w:100% h:auto px:.05rem m:auto
+			css w:100% h:auto px:1em m:auto
 				# d:htl g:.5rem
 			<p [w:100% maw:720px m:auto]> 
 				"Here are the commands you can use to navigate this termfolio:"
