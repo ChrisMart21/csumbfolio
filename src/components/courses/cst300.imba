@@ -24,7 +24,7 @@ tag cst-300
 					<li> "Engage in critical thinking about your own learning"
 					<li> "Engage in online discussion"
 
-			<div slot="course-content" [d:vsc w:100% g:1rem]>
+			<div slot="course-content" [d:vsc w:100% g:1rem m:auto maw:720px]>
 				<iframe [w:100% h:450px max-width:720px ] 
 					src="https://drive.google.com/file/d/1tRbrjInGBa51_nK7YmTo0DaTvCO20uKt/preview?usp=sharing">
 				<iframe [w:100% h:450px max-width:720px ] 

@@ -34,4 +34,4 @@ tag cst-311
 						consists of 1 chat server host, 1 webserver proteccted by a SSL 
 						certificate and 2 chat clients"
 							<p> "Project writeup:"
-							<iframe [w:100% h:500px] src="https://drive.google.com/file/d/1zUt-KOaFxOmj9gFI8PneaGivg18Y78HT/preview">
+						<iframe [w:100% h:500px] src="https://drive.google.com/file/d/1zUt-KOaFxOmj9gFI8PneaGivg18Y78HT/preview">

@@ -19,24 +19,42 @@ import "./courses/cst438.imba"
 import "./courses/cst329.imba"
 import "./courses/cst498.imba"
 import "./courses/cst499.imba"
-import {output_state,	commands,	feed_new_line, parse_command} from "./term-data.imba"
+import {
+	output_state,
+	commands,
+	feed_new_line,
+	parse_command,
+	courseList, 
+	pop_visit_hist} from "./term-data.imba"
 
 tag term-io
+	def awaken
+		courseHist = JSON.parse(window.localStorage.getItem("visited_courses"))
+		if courseHist isnt null then pop_visit_hist(courseHist)
 		
 	def focus_output e
 		e.target.scrollIntoView({behavior: "smooth"})
 
-	# Terminal input is always the last element 
-	# Makes focusing easy
 	def focus_input 
+		# Terminal input is always the last element 
 		lastElementChild.lastElementChild.focus({preventScroll:true})
+
+	def handle_ls_help e
+		# modify the input and display relevant course.
+		output_state[-1].text = "view {e.detail.courseNum}" 
+		output_state[-1].disabled = true
+		commands.view.execute([e.detail],[e.detail.courseNum])
+	
+	def handle_help e
+		feed_new_line(e.detail)
 
 	def render
 		<self [w:100% h:100% of:scroll]
 			@command-entered=parse_command
 			@output-mounted=focus_output
 			@input-mounted=focus_input
-			@help-command=feed_new_line(e.detail)
+			@help-command=handle_help
+			@ls-help=handle_ls_help
 			@click=focus_input
 			>
 			for ioLine, indx in output_state	
@@ -56,7 +74,7 @@ tag term-io
 					if ioLine.command === 'help'
 						<help commands=commands [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 					if ioLine.command === 'ls'
-						<listdir [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
+						<listdir bind:courses=courseList [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 					if ioLine.command === 'home'
 						<home-page [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 
