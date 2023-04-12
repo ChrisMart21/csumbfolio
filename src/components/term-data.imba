@@ -172,5 +172,6 @@ export let commands\object = {
 				courseList.forEach do(course\object)
 					course.visited = false
 				window.localStorage.setItem("visited_courses", JSON.stringify(courseList))
+				feed_new_line!
 		}
 	}

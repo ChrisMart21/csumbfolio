@@ -74,7 +74,7 @@ tag term-io
 					if ioLine.command === 'help'
 						<help commands=commands [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 					if ioLine.command === 'ls'
-						<listdir bind:courses=courseList [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
+						<listdir courses=courseList [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 					if ioLine.command === 'home'
 						<home-page [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 
