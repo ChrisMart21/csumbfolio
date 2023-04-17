@@ -9,8 +9,6 @@ tag title-button
 tag window-frame
 	prop min_height = 400
 	prop min_width = 400
-	prop x = 0
-	prop y = 0 
 	prop maximized? = false
 
 	prop minimized_state = {
@@ -20,21 +18,23 @@ tag window-frame
 		y: 0
 	}
 
-	@observable prop height = 1080
-	@observable prop width = 1080
-	@observable prop environment_height = 0
-	@observable prop environment_width = 0
+	@observable x = 0
+	@observable y = 0 
+	@observable height = 500
+	@observable width = 720
+	@observable environment_height = 0
+	@observable environment_width = 0
+	@computed get x_bounds
+		environment_width - width
+	@computed get y_bounds
+		environment_height - height
 
-	def awaken
-		# Init Terminal location (centered), and dimentions
+	def setup
+		environment_height = window.innerHeight
+		environment_width = window.innerWidth
 		x = Math.max(( environment_width - width ) / 2 , 0)
 		y = Math.max(( environment_height - height ) / 2 , 0)
 
-	@computed get x_bounds 	
-		environment_width - width
-
-	@computed get y_bounds
-		environment_height - height
 
 	def check_bounds	
 		if x > x_bounds then x = Math.max(x_bounds, 0)
@@ -87,11 +87,18 @@ tag window-frame
 		if y < 0 then y = 0
 		if x > x_bounds then x = x_bounds
 		if y > y_bounds then y = y_bounds
-
+			
+	def handle_env_resize t
+		L t
+		environment_height = window.innerHeight
+		environment_width = window.innerWidth
 
 	def handle_t_end
 		self.flags.remove('anim')
 	
+	def on$env_resize mods, context, handler, o
+		window.addEventListener('resize', handler, o) 	
+
 	def render
 		check_dimensions!
 		check_bounds!
@@ -104,6 +111,7 @@ tag window-frame
 		@minimize=handle_minimize
 		@exit=handle_minimize
 		@transitionend=handle_t_end
+		@env_resize=handle_env_resize
 		>
 			css bgc:gray8 rd:lg pos:absolute t:10% l:0 t:0
 				box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
