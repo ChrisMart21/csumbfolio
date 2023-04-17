@@ -89,7 +89,6 @@ tag window-frame
 		if y > y_bounds then y = y_bounds
 			
 	def handle_env_resize t
-		L t
 		environment_height = window.innerHeight
 		environment_width = window.innerWidth
 
@@ -106,7 +105,7 @@ tag window-frame
 
 		
 		css .anim tween:all 700ms back-in
-		<self [x:{x}px y:{y}px h:{height}px w:{width}px ]
+		<self
 		@maximize=handle_maximize
 		@minimize=handle_minimize
 		@exit=handle_minimize
@@ -115,6 +114,10 @@ tag window-frame
 		>
 			css bgc:gray8 rd:lg pos:absolute t:10% l:0 t:0
 				box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+			if !maximized? 
+				css x:{x}px y:{y}px h:{height}px w:{width}px 
+			else 
+				css w:100% h:100% x:0px y:0px
 			# Title, Nav, Preferences
 			<%title_bar [w:100% h:{Preferences.title-height}px]
 				@touch.sync(self)=handle_drag
