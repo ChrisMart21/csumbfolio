@@ -34,6 +34,9 @@ tag window-frame
 		environment_width = window.innerWidth
 		x = Math.max(( environment_width - width ) / 2 , 0)
 		y = Math.max(( environment_height - height ) / 2 , 0)
+		track_state!
+		if environment_height < 800 or environment_width < 800
+			maximized? = true
 
 
 	def check_bounds	
@@ -112,7 +115,7 @@ tag window-frame
 		@transitionend=handle_t_end
 		@env_resize=handle_env_resize
 		>
-			css bgc:gray8 rd:lg pos:absolute t:10% l:0 t:0
+			css bgc:gray8 rd:lg pos:fixed t:10% l:0 t:0
 				box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 			if !maximized? 
 				css x:{x}px y:{y}px h:{height}px w:{width}px 

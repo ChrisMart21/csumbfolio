@@ -8,9 +8,8 @@ global.L = console.log
 
 tag app
 	<self >
-		css h:100vh w:100vw 
+		css pos:fixed h:100vh w:100vw
 		<footer-tag>
 		<terminal>
-
 
 imba.mount <app>

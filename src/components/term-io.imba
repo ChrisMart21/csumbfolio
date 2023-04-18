@@ -62,48 +62,30 @@ tag term-io
 					<term-input 
 						bind:disabled=ioLine.disabled
 						bind:text=ioLine.text 
-						[y@in:100px x@out:-1000px ease:1s] ease>
+						>
 						
 				if ioLine.type === 'text-output'
 					<term-output text=ioLine.text
-						[x@in:-100px x@out:-1000px ease:500ms] ease>
+						>
 				
 				if ioLine.type === 'command'
-					if ioLine.command === 'about'
-						<about [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.command === 'help'
-						<help commands=commands [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.command === 'ls'
-						<listdir courses=courseList [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.command === 'home'
-						<home-page [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
+					if ioLine.command === 'about' then <about >
+					if ioLine.command === 'help' then <help commands=commands>
+					if ioLine.command === 'ls' then <listdir courses=courseList >
+					if ioLine.command === 'home' then <home-page >
 
 				if ioLine.type === 'course-tag'
-					if ioLine.course-num === '300'
-						<cst-300 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '338'
-						<cst-338 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '334'
-						<cst-334 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '363'
-						<cst-363 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '311'
-						<cst-311 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '336'
-						<cst-336 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '462'
-						<cst-462 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '328'
-						<cst-328 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '370'
-						<cst-370 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '383'
-						<cst-383 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '438'
-						<cst-438 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '329'
-						<cst-329 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '498'
-						<cst-498 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
-					if ioLine.course-num === '499'
-						<cst-499 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
+					if ioLine.course-num === '300' then <cst-300>
+					if ioLine.course-num === '338' then <cst-338>
+					if ioLine.course-num === '334' then <cst-334>
+					if ioLine.course-num === '363' then <cst-363>
+					if ioLine.course-num === '311' then <cst-311>
+					if ioLine.course-num === '336' then <cst-336>
+					if ioLine.course-num === '462' then <cst-462>
+					if ioLine.course-num === '328' then <cst-328>
+					if ioLine.course-num === '370' then <cst-370>
+					if ioLine.course-num === '383' then <cst-383>
+					if ioLine.course-num === '438' then <cst-438>
+					if ioLine.course-num === '329' then <cst-329>
+					if ioLine.course-num === '498' then <cst-498>
+					if ioLine.course-num === '499' then <cst-499>
