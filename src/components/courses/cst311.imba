@@ -13,7 +13,7 @@ tag cst-311
 				lab components."
 
 
-			<div slot="course-content" [d:vcc ta:center g:2rem]>
+			<div slot="course-content" [d:vcc ta:center g:2rem maw:720px m:auto]>
 				<h3><u> "Course Highlights"
 				<p><strong> "Python Chat server written using the python3 "
 					<a href="https://docs.python.org/3/library/socket.html" target="_blank"> "socket API." 

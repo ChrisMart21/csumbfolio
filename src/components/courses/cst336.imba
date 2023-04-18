@@ -1,5 +1,8 @@
 tag cst-336
-	css	img object-fit:fill s:540px rd:25px
+	css	img 
+		object-fit:fit s:300px rd:25px
+	css .cat-container
+		d:hsc jc:space-evenly flw:wrap bgc:white/25 g:1rem p:1rem rd:25px w:100% maw:720px
 	
 	<self>
 		<course-page>
@@ -11,21 +14,21 @@ tag cst-336
 				JavaScript, Web APIs, programming with Node.js.,
 				Express MVC Framework, and MySQL integration."
 				
-			<div slot="course-content" [d:vsc w:100% g:1rem ]>
-				<div [d:vsc maw:720px]>
-					<div [d:vsc]>
+			<div slot="course-content" [d:vsc w:100% g:1rem maw:720px m:auto]>
+				<div [d:vsc w:100%]>
+					<div [d:vsc w:100%]>
 						<h3><strong><em> " Course Highlights"
-						<p [w: 100% max-width:720px]> "This course was a brief overview of the fundamentals of 
+						<p [w: 100%]> "This course was a brief overview of the fundamentals of 
 						Web Development, and an introduction to the Node Development environment.
 						Each module had a learning focus/objective consisting of a 
 						guided lab, and self directed 'miniproject'."
-					<div [d:vsc ta:center g:1.5rem ] >
+					<div [d:vsc w:100%  ta:center g:1.5rem ] >
 						<div>				
 							<h3><strong> "Basic HTML / CSS"
-							<div [d:hsc jc:space-evenly  bgc:white/25 g:1rem p:1rem rd:25px]>
+							<div .cat-container>
 								<div >
 									<p> "Mock Portfolio Website"
-									<a href="https://lab1.cmarket.repl.co/" target="_blank">
+									<a  href="https://lab1.cmarket.repl.co/" target="_blank">
 										<img src="/assets/cst336/lab1JuanDoe.png">
 								<div>
 									<p> "Educational/Informative CS topic"
@@ -34,7 +37,7 @@ tag cst-336
 
 						<div>
 							<h3><strong> "Vanilla JS"
-							<div [d:hsc jc:space-evenly  bgc:white/25 g:1rem p:1rem rd:25px]>
+							<div .cat-container>
 								<div>
 									<p> "Quiz (Forms / Bootstrap)"
 									<a href="https://lab2-geography-quiz.cmarket.repl.co/" target="_blank">
@@ -46,7 +49,7 @@ tag cst-336
 
 						<div >
 							<h3><strong> "Client Side Scripting With Web APIs"
-							<div [d:hsc jc:space-evenly  bgc:white/25 g:1rem p:1rem rd:25px]>
+							<div .cat-container>
 								<div>
 									<p> "Website Signup Form / ZipCode API"
 									<a href="https://lab1.cmarket.repl.co/" target="_blank">
@@ -58,7 +61,7 @@ tag cst-336
 
 						<div>
 							<h3><strong> "Node.js/Express/Database integrations"
-							<div [d:hsc jc:space-evenly  bgc:white/25 g:1rem p:1rem rd:25px]>
+							<div .cat-container>
 								<div>
 									<p> "Node/Express/EJS templating"
 									<a href="https://lab4node.cmarket.repl.co/" target="_blank">
@@ -71,7 +74,7 @@ tag cst-336
 										
 							<div>
 								<h3><strong> "Final Group Project"
-								<div [d:vflex jc:space-evenly ai:center bgc:white/25 g:1rem p:1rem rd:25px]>
+								<div .cat-container>
 									<div [d:vflex jc:center ai:center]>
 										<p> "Social Forum"
 										<p> "CRUD / bcrypt / sessions / authentication / local APIs"

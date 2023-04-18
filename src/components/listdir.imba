@@ -19,16 +19,16 @@ tag listdir
 			.entry @hover c:amber4
 				# tween:all 0.25s ease-in-out
 		<self [px:1em ]>
-			<p > 
-			"{rwxl} 
-			v
-			year 
-			trm
-			num
-			course
-			"
+			<p [w:auto]> 
+				"{rwxl} 
+				v
+				year 
+				trm
+				num
+				course
+				"
 			for course of courses
-				<p @click=handle_ls_click(course) [ws:pre-wrap]> 
+				<p  [ws:pre-wrap]> 
 					"." 
 					<span .read> "r"
 					<span .write> "w"
@@ -41,6 +41,9 @@ tag listdir
 					<span .exec> "x"
 					# <span .visited=visited .non-visited=!visited> " {visited ? 'Y' : 'N'} "
 					
-					<span .entry .visited=course.visited .non-visited=!course.visited> 
+					<span 
+						@click=handle_ls_click(course)
+						.entry 
+						.visited=course.visited .non-visited=!course.visited> 
 						" {course.visited ? 'Y' : 'N'} "
 						"{course.year} {course.term} {course['courseNum']} {course['courseName']}"
