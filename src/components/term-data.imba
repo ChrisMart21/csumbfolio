@@ -57,17 +57,16 @@ export 	def nyi
 export 	def parse_command e\CustomEvent
 		let line-split\Array = e.detail.trim!.split(' ')
 		L line-split.join(" ")
-		let command\string = line-split.shift!
+		let command\string = line-split.shift!.toLowerCase!
 		let flags\Array = []
 		let args\Array = []
 		let flagscaptured = false
 		if commands.hasOwnProperty(command)
 			while line-split.length > 0 
 				let split\string = line-split.shift!
-				if split.charAt(0) === '-' and !flagscaptured # Flag Indicator
+				if split.startsWith('-') 
 					for f in split.slice(1).toLowerCase!.split('')
 						unless flags.includes(f) then flags.push(f)					
-					flagscaptured = !flagscaptured
 				else # Arguments
 					args.push(split)
 			commands[command]['execute'](flags, args)
