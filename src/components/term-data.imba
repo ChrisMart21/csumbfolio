@@ -56,7 +56,6 @@ export 	def nyi
 
 export 	def parse_command e\CustomEvent
 		let line-split\Array = e.detail.trim!.split(' ')
-		L line-split.join(" ")
 		let command\string = line-split.shift!.toLowerCase!
 		let flags\Array = []
 		let args\Array = []
@@ -70,7 +69,6 @@ export 	def parse_command e\CustomEvent
 				else # Arguments
 					args.push(split)
 			commands[command]['execute'](flags, args)
-			L "Command: {command} flags: {flags} args: {args}"
 		else
 			output_state.push({
 				type: 'text-output'

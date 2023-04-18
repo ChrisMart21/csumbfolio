@@ -14,7 +14,6 @@ tag term-input
 
 
 	def resize_ta_height e\InputEvent
-		# L e.target.offsetHeight, e.target.clientHeight
 		let offset = e.target.offsetHeight - e.target.clientHeight;
 		e.target.style.height = 'auto'
 		e.target.style.height = "{e.target.scrollHeight + offset}px";
