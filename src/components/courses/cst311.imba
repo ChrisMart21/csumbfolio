@@ -1,7 +1,7 @@
 tag cst-311
 	<self>
 		<course-page>
-			<span slot="course-name"> "CST 311"
+			<span slot="course-name"> "CST 311: Computer Networking"
 			<div slot="course-description" > 
 				"Survey of Telecomm and Data Comm Technology Fundamentals,
 				Local Area Network, Wide Area Network, Internet and internetworking

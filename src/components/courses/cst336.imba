@@ -6,7 +6,7 @@ tag cst-336
 	
 	<self>
 		<course-page>
-			<span slot="course-name"> "CST 336"
+			<span slot="course-name"> "CST 336: Internet Programming"
 			<div slot="course-description"> 
 				"This course is designed to provide students with dynamic web 
 				application development skills, focusing on both frontend and backend

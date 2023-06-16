@@ -1,7 +1,7 @@
 tag cst-462
 	<self>
 		<course-page>
-			<span slot="course-name"> "CST 462"
+			<span slot="course-name"> "CST 462: Race, Gender, Class in the Digital World"
 			<div slot="course-description"> 
 				"This is an 8-week course in which students learn about and discuss 
 				a weekly social justice topic while providing tech-based service to an

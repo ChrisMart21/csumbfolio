@@ -1,7 +1,7 @@
 tag cst-328
 	<self>
 		<course-page>
-			<span slot="course-name"> "CST 328"
+			<span slot="course-name"> "CST 328: Digital Art & Design"
 			<div slot="course-description" [ta:left]> 
 				<p> "A survey course that combines the study of technology, design and 
 				aesthetic principles as they apply to twenty-first century visual media. 

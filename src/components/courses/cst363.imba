@@ -1,7 +1,7 @@
 tag cst-363
 	<self>
 		<course-page>
-			<span slot="course-name"> "CST 363"
+			<span slot="course-name"> "CST 363: Database Mangement"
 			<div slot="course-description"> 
 				"This course provides balanced coverage of database use and design,
 				focusing on relational databases. Students will learn to design 

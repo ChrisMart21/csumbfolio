@@ -1,7 +1,7 @@
 tag cst-498
 	<self>
 		<course-page>
-			<span slot="course-name"> "CST 498"
+			<span slot="course-name"> "CST 498: Capstone Project Planning"
 			<div slot="course-description">
 				"This is an intermediate-level programming course covering techniques 
 				for developing large-scale software systems using object-oriented 

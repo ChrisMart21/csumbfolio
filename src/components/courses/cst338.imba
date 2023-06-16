@@ -20,7 +20,7 @@ tag cst-338
 		)
 	<self>
 		<course-page>
-			<span slot="course-name"> "CST 338: Software Deisn Java"
+			<span slot="course-name"> "CST 338: Software Design w/ Java"
 			<div slot="course-description" [ta:left]> 
 				"This is an intermediate-level programming course covering techniques 
 				for developing large-scale software systems using object-oriented 

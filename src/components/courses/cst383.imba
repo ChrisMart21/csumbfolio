@@ -1,7 +1,7 @@
 tag cst-383
 	<self>
 		<course-page>
-			<span slot="course-name"> "CST 383"
+			<span slot="course-name"> "CST 383: Intro to Data Science"
 			<div slot="course-description"> 
 				"In data science, data analysis, and machine learning techniques are 
 				applied to visualize data, understand trends, and make predictions. In 

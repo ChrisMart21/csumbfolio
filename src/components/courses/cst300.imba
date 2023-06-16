@@ -1,7 +1,7 @@
 tag cst-300
 	<self>
 		<course-page>
-			<span slot="course-name"> "CST 300"
+			<span slot="course-name"> "CST 300: Major ProSeminar"
 			<div slot="course-description">
 				"Helps students identify and articulate personal, professional,
 				and social goals. Provides an integrated overview of the computer
