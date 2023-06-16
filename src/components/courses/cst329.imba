@@ -1,7 +1,7 @@
 tag cst-329
 	<self>
 		<course-page>
-			<span slot="course-name"> "CST 338"
+			<span slot="course-name"> "CST 329: Intro to Logic"
 			<div slot="course-description"> 
 				"This is an intermediate-level programming course covering techniques 
 				for developing large-scale software systems using object-oriented 
