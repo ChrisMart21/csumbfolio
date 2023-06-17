@@ -3,9 +3,9 @@ tag cst-498
 		<course-page>
 			<span slot="course-name"> "CST 498: Capstone Project Planning"
 			<div slot="course-description">
-				"This is an intermediate-level programming course covering techniques 
-				for developing large-scale software systems using object-oriented 
-				programming. Coverage includes software development life cycle 
-				models, requirements analysis, and graphical user interface development."
+				"Students create a detailed proposal of a substantial, professional 
+				level project with an approval of the student's capstone advisor. 
+				Students learn and practice project planning, collaboration and writing 
+				skills required in the industry."
 
 			<div slot="course-content" [d:vcc ta:center]>
