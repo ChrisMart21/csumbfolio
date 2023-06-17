@@ -17,7 +17,7 @@ import "./courses/cst370.imba"
 import "./courses/cst383.imba"
 import "./courses/cst438.imba"
 import "./courses/cst329.imba"
-import "./courses/cst498.imba"
+import "./courses/cst489.imba"
 import "./courses/cst499.imba"
 import {
 	output_state,
@@ -65,8 +65,7 @@ tag term-io
 						>
 						
 				if ioLine.type === 'text-output'
-					<term-output text=ioLine.text
-						>
+					<term-output text=ioLine.text>
 				
 				if ioLine.type === 'command'
 					if ioLine.command === 'about' then <about >
@@ -87,5 +86,5 @@ tag term-io
 					if ioLine.course-num === '383' then <cst-383>
 					if ioLine.course-num === '438' then <cst-438>
 					if ioLine.course-num === '329' then <cst-329>
-					if ioLine.course-num === '498' then <cst-498>
+					if ioLine.course-num === '489' then <cst-489>
 					if ioLine.course-num === '499' then <cst-499>

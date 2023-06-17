@@ -1,7 +1,7 @@
-tag cst-498
+tag cst-489
 	<self>
 		<course-page>
-			<span slot="course-name"> "CST 498: Capstone Project Planning"
+			<span slot="course-name"> "CST 489: Capstone Project Planning"
 			<div slot="course-description">
 				"Students create a detailed proposal of a substantial, professional 
 				level project with an approval of the student's capstone advisor. 

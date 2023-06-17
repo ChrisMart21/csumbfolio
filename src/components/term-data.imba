@@ -11,7 +11,7 @@ export let courseList = [
 		{courseNum: 383, courseName: "Intro to Data Science", visited: false, year:2023, term:"Spr"}
 		{courseNum: 438, courseName: "Software Engineering", visited: false, year:2023, term:"Spr"}
 		{courseNum: 329, courseName: "Reasoning W/ Logic", visited: false, year:2023, term:"Sum"}
-		{courseNum: 498, courseName: "Capstone Planning", visited: false, year:2023, term:"Sum"}
+		{courseNum: 489, courseName: "Capstone Planning", visited: false, year:2023, term:"Sum"}
 		{courseNum: 499, courseName: "Capstone", visited: false, year:2023, term:"Sum"}
 	]
 

@@ -11,7 +11,7 @@ import "./cst370.imba"
 import "./cst383.imba"
 import "./cst438.imba"
 import "./cst329.imba"
-import "./cst498.imba"
+import "./cst489.imba"
 import "./cst499.imba"
 import "./footer-tag.imba"
 tag main-content
@@ -57,7 +57,7 @@ tag main-content
 			when 329
 				<cst-329 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 			when 498
-				<cst-498 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
+				<cst-489 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 			when 499
 				<cst-499 [scale@off:0 x@in:-500px y@off:500px ease:500ms] ease>
 			else
