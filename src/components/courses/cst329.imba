@@ -8,7 +8,7 @@ tag cst-329
 			<div slot="course-content" [d:vsc w:100% maw:720px m:auto g:1.5em]>
 				<h1><u> "Course Highlights"
 				<p> 
-					"The logical language we studied was studied from 
+					"The logical language we studied was from 
 					{<a href="https://milnepublishing.geneseo.edu/concise-introduction-to-logic/" target="_blank"> 'A Concise Introduction to Logic by Craig DeLancey' }"
 				<p> 
 					"DeLancey provides a thorough introduction to the basics of deductive 
