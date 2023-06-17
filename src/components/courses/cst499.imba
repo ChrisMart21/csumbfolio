@@ -3,9 +3,10 @@ tag cst-499
 		<course-page>
 			<span slot="course-name"> "CST 499: Mentored Group Capstone"
 			<div slot="course-description"> 
-				"This is an intermediate-level programming course covering techniques 
-				for developing large-scale software systems using object-oriented 
-				programming. Coverage includes software development life cycle 
-				models, requirements analysis, and graphical user interface development."
+				"Students will work on a project in large groups, developing 
+				requirements specification, a solution plan followed by design and 
+				implementation of the solution. The problem statement for the projects 
+				will be selected by the faculty. Faculty will also play the role of a 
+				project manager directing the schedule and deliverables for these projects."
 
 			<div slot="course-content" [d:vcc ta:center]>
