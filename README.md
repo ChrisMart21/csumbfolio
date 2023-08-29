@@ -4,4 +4,4 @@
 
 Welcome to my CSUMB Catalog website! This project serves as a recap of my two-year stay at California State University, Monterey Bay (CSUMB).
 
-This webpage marked my first foray into exploring the [Imba](https://imba.io/ "Imba - Programming Language"); a nifty, underratedd language that magically transpiles into JavaScript, HTML, and CSS.
+This webpage marked my first foray into exploring [Imba](https://imba.io/ "Imba - Programming Language"); a nifty, underratedd language that magically transpiles into JavaScript, HTML, and CSS.
