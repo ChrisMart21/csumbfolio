@@ -29,7 +29,7 @@ tag term-input
 			css d:htl w:100%
 
 			<p$term-domain.domain> "{username}@{domain}:{currentDirectory}"
-				css px:.5rem
+				css px:.5rem fls:0
 			<textarea$term-text-area rows='1' wrap='hard' 
 				disabled=disabled
 				@input=resize_ta_height
